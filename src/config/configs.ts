@@ -12,10 +12,10 @@ export const dbConfig = {
 };
 
 export const fcmConfig = {
-    project_id: process.env.FCM_CLIENT_EMAIL,
-    client_email: process.env.FCM_PROJECT_ID,
+    project_id: process.env.FCM_PROJECT_ID,
+    client_email: process.env.FCM_CLIENT_EMAIL,
     client_id: process.env.FCM_Client_ID,
-    privateKey: process.env.FCM_PRIVATE_KEY
+    privateKey: (process.env.FCM_PRIVATE_KEY as string).replace(/\\n/gm, "\n")
 }
 export const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY ?? "your-default-secret-key";
 

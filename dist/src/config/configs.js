@@ -16,10 +16,10 @@ exports.dbConfig = {
     decimalNumbers: true,
 };
 exports.fcmConfig = {
-    project_id: process.env.FCM_CLIENT_EMAIL,
-    client_email: process.env.FCM_PROJECT_ID,
+    project_id: process.env.FCM_PROJECT_ID,
+    client_email: process.env.FCM_CLIENT_EMAIL,
     client_id: process.env.FCM_Client_ID,
-    privateKey: process.env.FCM_PRIVATE_KEY
+    privateKey: process.env.FCM_PRIVATE_KEY.replace(/\\n/gm, "\n")
 };
 exports.JWT_SECRET_KEY = (_e = process.env.JWT_SECRET_KEY) !== null && _e !== void 0 ? _e : "your-default-secret-key";
 exports.PORT = (_f = process.env.PORT) !== null && _f !== void 0 ? _f : "9090";
