@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "npm install && node dist/src/server.js",
+    "start": "npm install --loglevel=verbose && node dist/src/server.js --loglevel=verbose",
     "startServer": "npm install && node dist/src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/**/*.ts",
